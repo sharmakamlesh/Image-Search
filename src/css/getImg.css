@@ -22,6 +22,10 @@
     border-radius: 5px;
 }
 
+.error {
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     .imgCard {
         width: 90%;

@@ -4,7 +4,6 @@ import { key } from "../constant";
 import "../css/getImg.css";
 const GetImg = () => {
   const [photo, setPhoto] = useState([]);
-  const [loading, setLoading] = useState(false);
   const GetInputValue = (e) => {
     let input = document.getElementById("inputValue");
     let url = `https://api.unsplash.com/search/photos?page=1&query=${input.value}&${key}`;
@@ -27,13 +26,11 @@ const GetImg = () => {
   return (
     <>
       <SearchBar getValue={() => GetInputValue()} enterKey={onEnterKey} />
-      {}
-      {loading ? <p>Loading...</p> : null}
       <div className="imgWrapper">
         {photo.length === 0 ? (
-          <div>
+          <div className="error">
             <h2>Not Found Any Images!!</h2>
-            <h3>Search for Photos </h3>
+            <h3>Search Here </h3>
           </div>
         ) : null}
         {photo.map((imgs, index) => (
