@@ -6,7 +6,7 @@ const GetImg = () => {
   const [photo, setPhoto] = useState([]);
   const GetInputValue = (e) => {
     let input = document.getElementById("inputValue");
-    let url = `https://api.unsplash.com/search/photos?page=1&query=${input.value}&${key}`;
+    let url = `https://api.unsplash.com/search/photos?page=1&query=${input.value}&${key}&per_page=30`;
     console.log(url);
     if (input.value !== "") {
       fetch(url)
